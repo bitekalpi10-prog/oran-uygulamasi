@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>Oran Takip</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    h1 { color: #52e0a0; }
+    .card {
+      background: #1d293b;
+      padding: 18px;
+      border-radius: 14px;
+      margin-top: 18px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #39465a;
+    }
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 0;
+      font-size: 16px;
+    }
+    button {
+      background: #52e0a0;
+      color: #101827;
+      font-weight: bold;
+    }
+    .note { color: #b7c3d4; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>⚽ Oran Takip</h1>
+  <p>Bet365 Alt / Üst oran ekranı</p>
+
+  <div class="card">
+    <h3>Maç seçimi</h3>
+    <label for="match">Maç adı</label>
+    <input id="match" value="Sassuolo - Lazio">
+    <button onclick="showMatch()">Maçı göster</button>
+    <h3 id="title">Sassuolo - Lazio</h3>
+    <p class="note">Örnek ekran — oranlar henüz canlı veriden alınmıyor.</p>
+  </div>
+
+  <div class="card">
+    <h3>Alt / Üst oranları</h3>
+    <div class="row"><span>1.5 Gol Üst</span><b>—</b></div>
+    <div class="row"><span>2.5 Gol Üst</span><b>—</b></div>
+    <div class="row"><span>2.5 Gol Alt</span><b>—</b></div>
+    <div class="row"><span>3.5 Gol Üst</span><b>—</b></div>
+    <p class="note">Canlı oran bağlantısı sonraki aşamada eklenecek.</p>
+  </div>
+
+  <script>
+    function showMatch() {
+      const match = document.getElementById("match").value.trim();
+      if (match) {
+        document.getElementById("title").textContent = match;
+      }
+    }
+  </script>
+</body>
+</html>
